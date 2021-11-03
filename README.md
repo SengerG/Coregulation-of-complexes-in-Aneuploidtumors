@@ -14,33 +14,37 @@ Aneuploidy, defined as whole chromosomal or chromosome arm-level changes, is a h
 
 Note: Publicy available data used in this study can be downloaded from the corresponding consortium (Please see "Data availability" statement).
 
+1. Codes 
+
 AneuploidyScores.R - R code to calculate whole chromosome-level aneuploidy scores and to detect cancer type-specific aneuploidies. 
 
 DataProcessing.R - Transcriptomic and proteomic data processing.
 
-human_genes.txt - Ensembl gene IDs and gene symbols obtained from ensembl BioMart (Human genome version GRCh38.p13 - downloaded on May, 2019). 
-
-DetectingChanges.R - Detecting transcriptomic and proteomic changes induced by amplifications/deletions
-
-AneuploidyTable.RData - Whole chromosome-level aneuploidy scores for 10522 TCGA samples. This file can also be produced by running the AneuploidyScores.R. 
-
-CasesSelected_alltumours_amp.xlsx - Detected 86 whole chromosome-level amplifications. 
+DetectingChanges.R - Detecting transcriptomic and proteomic changes induced by amplifications/deletions.
 
 AssociationTests.R - Chi-square tests between changes on aneuploid chromosomes and those on other chromosomes.
-
-HumanPCgenes_Subunits_allchr.RData - CORUM human known protein complexes and subunits. 
-
-Table_cutoff.xlsx - File for which cut-off were used to detect DEGs in each aneuploidy case. 
-
-DE_Transcriptome_Sig.RData - Transcriptomic changes for 86 detected cancer type-specific amplifications with annotation for being differentially expressed or not. 
-
-DE_Proteome_Sig.RData - Proteomic changes for 13 detected cancer type-specific amplifications with annotation for being differentially abundant or not. 
 
 Correlations.R - Calculation of spearman correlations for all possible pairwise correlations. 
 
 ComplexNumber.R - Finding number of complexes a protein involved in (for differentially abundant proteins on aneuploid chromosomes).
 
+2. Files
+
+human_genes.txt - Ensembl gene IDs and gene symbols obtained from ensembl BioMart (Human genome version GRCh38.p13 - downloaded on May, 2019). 
+
+AneuploidyTable.RData - Whole chromosome-level aneuploidy scores for 10522 TCGA samples. This file can also be produced by running the AneuploidyScores.R. 
+HumanPCgenes_Subunits_allchr.RData - CORUM human known protein complexes and subunits. 
+DE_Transcriptome_Sig.RData - Transcriptomic changes for 86 detected cancer type-specific amplifications with annotation for being differentially expressed or not. 
+DE_Proteome_Sig.RData - Proteomic changes for 13 detected cancer type-specific amplifications with annotation for being differentially abundant or not.
 SpearmanCorr_mrna&protein.RData - Spearman correlations between up-regulated proteins of aneuploid chromosomes and their co-complex members on other chromosomes. 
+
+CasesSelected_alltumours_amp.xlsx - Detected 86 whole chromosome-level amplifications. 
+Table_cutoff.xlsx - File for which cut-off were used to detect DEGs in each aneuploidy case. 
+
+
+
+
+
 
 
 
