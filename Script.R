@@ -1,6 +1,8 @@
 
 # Set a working directory
 
+# Note: Some big files (^DE_Transcriptome.*.RData and ^SpearmanCorr_DAP&Partners_mrna&protein_*.RData could not be uploaded because of the high size of the files).
+
 setwd(dir = "./Github") # Path to where you download the files from the repository
 
 # Required libraries
