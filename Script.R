@@ -194,7 +194,7 @@ for (type in c.types) {
   rownames(tpm_primary) = as.character(tpm_primary$Gene.name)
   tpm_primary = tpm_primary[,-1]
   tpm_primary = tpm_primary[which(rowSums(tpm_primary) > 0),] #filtered out genes
-  save(tpm_primary, file = paste0("./",type,"_tpm_primary_genenames.RData"))} # The output files can also be found in ./Data/TCGA_Data. 
+  save(tpm_primary, file = paste0("./",type,"_tpm_primary_genenames.RData"))} 
 
 # 2. Proteomic data
 
@@ -288,7 +288,7 @@ BRCA_pcounts = as.data.frame(BRCA_pcounts) # 10625 genes x 105 samples - It can 
 c.types = c("OV","BRCA","COREAD")
 
 for (type in c.types){
-  assign("tpm_primary",get(load(paste0("./Data/TCGA_Data/",type,"_tpm_primary_genenames.RData")))) # Output files produced by transcriptome data processing code
+  assign("tpm_primary",get(load(paste0("./",type,"_tpm_primary_genenames.RData")))) # Output files produced by transcriptome data processing code
   tpm_primary = as.data.frame(tpm_primary)
   assign("pcounts_primaryI",get(load(paste0("./Data/CPTAC_Data/",type,"_pcounts.RData")))) # Output files produced by proteome data processing code
   pcounts_primaryI = as.data.frame(pcounts_primaryI)
@@ -322,7 +322,7 @@ c.types = unique(cases_slctd$Cancer.Type)
 Stat = c()
 
 for (type in c.types) {
-  assign("tpm_primary",get(load(paste0("./Data/TCGA_Data/",type,"_tpm_primary_genenames.RData")))) # Output files produced by transcriptome data processing code
+  assign("tpm_primary",get(load(paste0("./",type,"_tpm_primary_genenames.RData")))) # Output files produced by transcriptome data processing code
   cases = as.character(cases_slctd[cases_slctd$Cancer.Type == type,"Chromosomal.Aneuploidy"])
   for (c in cases) {
     df = Aneuploidy_table[Aneuploidy_table$Type == type,colnames(Aneuploidy_table) %in% c("Sample","Type",c)]
@@ -414,7 +414,7 @@ c.types = unique(cases_slctd$Cancer.Type)
 Stat = c()
 
 for (type in c.types) {
-  assign("tpm_primary",get(load(paste0("./Data/TCGA_Data/",type,"_tpm_primary_genenames.RData"))))
+  assign("tpm_primary",get(load(paste0("./",type,"_tpm_primary_genenames.RData"))))
   cases = as.character(cases_slctd[cases_slctd$Cancer.Type == type,"Chromosomal.Aneuploidy"])
   for (c in cases) {
     # Select samples which have chr ane (chr1 amp for example) and samples which do not, then prepare wilcox matrix for test
