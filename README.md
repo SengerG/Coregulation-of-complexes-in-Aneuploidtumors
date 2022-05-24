@@ -1,8 +1,8 @@
 # Coregulation-of-complexes-in-aneuploidtumors
 
-This is repository for the codes to run main analyses and produce data for the study "Regulation of protein complex partners as a compensatory mechanism in aneuploid tumors"
+This is repository for the codes to run main analyses and produce data for the study:
 
-Authors: Gökçe Senger, Stefano Santaguida, Martin H. Schaefer
+Gökçe Senger, Stefano Santaguida, Martin H Schaefer (2022) Regulation of protein complex partners as a compensatory mechanism in aneuploid tumors eLife 11:e75526.https://doi.org/10.7554/eLife.75526
 
 For any questions regarding the code and/or data, please contact with Gökçe Senger (gokce.senger@ieo.it). 
 
